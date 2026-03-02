@@ -17,6 +17,7 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
+  align-items: center;
 }
 
 h1,
@@ -62,8 +63,6 @@ ol {
 }
 
 .result {
-  height: 456px;
-  width: 711px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -85,7 +84,6 @@ ol {
   display: grid;
   grid-template-columns: 225px 212px 194px;
   gap: 40px;
-  height: 54px;
 }
 
 .content__details {
@@ -183,7 +181,6 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 6px;  
-  width: 196px;
 }
 
 .content__video-card-title {
@@ -311,10 +308,6 @@ ol {
   width: 100%;
   margin-top: 30px;
   margin-bottom: 3px;
-}
-
-.more-button:focus-visible {
-  outline: 1px solid white;                    
 }
 
 .button:hover {
