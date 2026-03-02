@@ -57,7 +57,6 @@ ol {
   flex-direction: row;
   align-items: flex-end;
   gap: 30px;
-  height: 534px;
   width: 1140px;
   margin: 133px 30px;
 }
@@ -114,7 +113,11 @@ ol {
   text-decoration: none;
 }
 
-.content__card-link_current:active {
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__list-item:active {
   background-color: #545050;
 }
 
@@ -152,7 +155,7 @@ ol {
 .search-form__fieldset-title {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
-  font-style: Regular;
+  font-style: regular;
   font-size: 18px;
   line-height: 100%;
 }
@@ -160,16 +163,17 @@ ol {
 .title {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
-  font-style: "bold";
+  font-style: bold;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
+  height: 210px;
 }
 
 .content__accent {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
-  font-style: "bold";
+  font-style: bold;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
@@ -181,6 +185,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  flex-shrink: 0;
+  width: 196px;
 }
 
 .content__video-card-title {
@@ -190,6 +196,9 @@ ol {
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -198,9 +207,8 @@ ol {
   font-style: "Regular";
   font-size: 18px;
   line-height: 16px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -233,6 +241,11 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .search-form__textfield {
   border: 1px solid white;
   border-left: none;
@@ -254,9 +267,10 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
+  outline-offset: 3px;
 }
 
-.search-form__textfield:active {
+.search-form__textfield:focus {
   outline: none;
 }
 
@@ -279,11 +293,6 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
-}
-
-.search-form__label-text:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .button {
