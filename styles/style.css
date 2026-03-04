@@ -148,6 +148,11 @@ ol {
   object-position: center;
 }
 
+.search-form__label-text:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .search-form__fieldset-title {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -163,7 +168,6 @@ ol {
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  height: 210px;
 }
 
 .content__accent {
